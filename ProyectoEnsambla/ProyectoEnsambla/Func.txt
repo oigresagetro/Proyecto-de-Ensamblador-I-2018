@@ -1,8 +1,0 @@
-.586					;selecciona el Pentium y el modelo de 32 bits
-.model flat, C			;selecciona el modelo plano con enlace a C/C++
-.stack 1024				;asigna espacio a la pila
-.code					;inicio del segmento de código
-
-public Suma		;define Invierte como función pública
-
-Suma proc
