@@ -77,13 +77,13 @@ double CFunciones::evaluar(string p) {
 		case '/':
 			op2 = pila.top(); pila.pop();
 			op1 = pila.top(); pila.pop();
-			pila.push(op1 / op2);
+			rsl = suma(op1, op2);
+			pila.push(rsl);
 			break;
 		case '+':
 			op2 = pila.top(); pila.pop();
 			op1 = pila.top(); pila.pop();
-
-			pila.push(op1 + op2);
+			pila.push(op1+op2);
 			break;
 		case '-':
 			op2 = pila.top(); pila.pop();
@@ -91,6 +91,8 @@ double CFunciones::evaluar(string p) {
 	
 			pila.push(op1 - op2);
 			break;
+		case '!':
+
 		default:
 			string aux = "";
 			while (p[i] != ' ')
@@ -103,7 +105,6 @@ double CFunciones::evaluar(string p) {
 }
 
 double CFunciones::suma(double a,double b) {
-	
 	n = _sumaE(a,b);
 		return n;
 }
@@ -131,9 +132,9 @@ double CFunciones::raizCuadrada(double numero) {
 	return 0;
 }
 int CFunciones::factorial(int numero) {
-	return 0;
-}
-
-double CFunciones::elevarNDecimales(double numero, double potencia) {
-	return 0;
+	n = 1;
+	for (int i = 1;i <= numero;i++) {
+		n = n*i;
+	}
+	return n;
 }

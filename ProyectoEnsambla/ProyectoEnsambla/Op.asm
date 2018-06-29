@@ -6,6 +6,9 @@ PUBLIC _sumaE
 PUBLIC valorAbs
 
 EXTERN puts:PROC
+.data
+
+rsl  dd 0
 
 .code
 
@@ -13,9 +16,12 @@ _sumaE proc  uses ebx ecx , \
 numb:dword , \
 num:dword
 
-	mov ebx,numb
-	mov eax,num
-	add eax,ebx
+	fld	numb	        ; need to convert 32-bit to 64-bit
+	fld	num
+	fadd
+	fstp	rsl		; store sum in z
+
+	mov	eax, rsl
 
   ret
 _sumaE endp

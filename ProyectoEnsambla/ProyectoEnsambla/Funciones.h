@@ -30,9 +30,9 @@ public:
 	double valorAbsoluto(double numero);
 	double raizCuadrada(double numero);
 	int factorial(int numero);
-	double elevarNDecimales(double numero, double potencia);
 	double elevarCuadrado(double numero);
 
 	double n = 0;
+	double rsl = 0;
 };
 
