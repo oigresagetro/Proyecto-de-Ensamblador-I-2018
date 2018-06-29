@@ -1,0 +1,7 @@
+﻿  Funciones.cpp
+Funciones.cpp(25): warning C4018: '<': no coinciden signed/unsigned
+Funciones.cpp(65): warning C4018: '<': no coinciden signed/unsigned
+Funciones.cpp(127): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+  Calc.obj : /DEBUG:FASTLINK no se admite cuando hay presente código administrado; reiniciando vínculo con /DEBUG:FULL
+  ProyectoEnsambla.vcxproj -> C:\Users\Roberto Vargas\Documents\Visual Studio 2015\Projects\ProyectoEnsambla\Debug\ProyectoEnsambla.exe
+  ProyectoEnsambla.vcxproj -> C:\Users\Roberto Vargas\Documents\Visual Studio 2015\Projects\ProyectoEnsambla\Debug\ProyectoEnsambla.pdb (Partial PDB)
