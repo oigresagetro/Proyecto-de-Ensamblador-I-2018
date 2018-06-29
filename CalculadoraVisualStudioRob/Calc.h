@@ -451,113 +451,83 @@ namespace ProyectoEnsambla {
 		Application::Exit();
 	}
 	private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
-		System::String^ cadena = "";
-		System::String^ uno = "1";
 		System::String^ h = expresion->Text;
-		cadena = h + uno;
-		expresion->Text = cadena;
+		h = h + "1";
+		expresion->Text = h;
 	}
 private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ dos = "2";
 	System::String^ h = expresion->Text;
-	cadena = h + dos;
-	expresion->Text = cadena;
+	h = h + "2";
+	expresion->Text = h;
 }
 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ menos = "^";
 	System::String^ h = expresion->Text;
-	cadena = h + menos;
-	expresion->Text = cadena;
+	h = h + "^";
+	expresion->Text = h;
 }
 private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ cero = "0";
 	System::String^ h = expresion->Text;
-	cadena = h + cero;
-	expresion->Text = cadena;
+	h = h + "0";
+	expresion->Text = h;
 }
 private: System::Void btn3_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ tres = "3";
 	System::String^ h = expresion->Text;
-	cadena = h + tres;
-	expresion->Text = cadena;
+	h = h + "3";
+	expresion->Text = h;
 }
 private: System::Void btn4_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ cuatro = "4";
 	System::String^ h = expresion->Text;
-	cadena = h + cuatro;
-	expresion->Text = cadena;
+	h = h + "4";
+	expresion->Text = h;
 }
 private: System::Void btn5_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ cinco = "5";
 	System::String^ h = expresion->Text;
-	cadena = h + cinco;
-	expresion->Text = cadena;
+	h = h + "5";
+	expresion->Text = h;
 }
 private: System::Void btn6_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ seis = "6";
 	System::String^ h = expresion->Text;
-	cadena = h + seis;
-	expresion->Text = cadena;
+	h = h + "6";
+	expresion->Text = h;
 }
 private: System::Void btn7_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ siete = "7";
 	System::String^ h = expresion->Text;
-	cadena = h + siete;
-	expresion->Text = cadena;
+	h = h + "7";
+	expresion->Text = h;
 }
 private: System::Void btn8_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ ocho = "8";
 	System::String^ h = expresion->Text;
-	cadena = h + ocho;
-	expresion->Text = cadena;
+	h = h + "8";
+	expresion->Text = h;
 }
 private: System::Void btn9_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ nueve = "9";
 	System::String^ h = expresion->Text;
-	cadena = h + nueve;
-	expresion->Text = cadena;
+	h = h + "9";
+	expresion->Text = h;
 }
 private: System::Void btnAC_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ cadena = "";
 	expresion->Text = cadena;
 }
 private: System::Void btnMas_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ mas = "+";
 	System::String^ h = expresion->Text;
-	cadena = h + mas;
-	expresion->Text = cadena;
+	h = h + "+";
+	expresion->Text = h;
 }
 private: System::Void btnMenos_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ menos = "-";
 	System::String^ h = expresion->Text;
-	cadena = h + menos;
-	expresion->Text = cadena;
+	h = h + "-";
+	expresion->Text = h;
 }
 private: System::Void btnMult_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ mult = "*";
 	System::String^ h = expresion->Text;
-	cadena = h + mult;
-	expresion->Text = cadena;
+	h = h + "*";
+	expresion->Text = h;
 }
 private: System::Void btnDiv_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ div = "/";
 	System::String^ h = expresion->Text;
-	cadena = h + div;
-	expresion->Text = cadena;
+	h = h + "/";
+	expresion->Text = h;
 }
 private: System::Void btnIgual_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ h = expresion->Text;
@@ -588,11 +558,9 @@ private: System::Void button20_Click(System::Object^  sender, System::EventArgs^
 	expresion->Text = System::Convert::ToString(res);
 }
 private: System::Void btnPunto_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ cadena = "";
-	System::String^ punto = ".";
 	System::String^ h = expresion->Text;
-	cadena = h + punto;
-	expresion->Text = cadena;
+	h = h + ".";
+	expresion->Text = h;
 }
 private: System::Void button2_Click_1(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ h = expresion->Text;
