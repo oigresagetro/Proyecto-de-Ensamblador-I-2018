@@ -5,6 +5,7 @@ using namespace std;
 extern "C" void hello_from_asm();
 extern "C" double _sumaE(double,double);
 extern "C" int valorAbs(int);
+extern "C" double _restaE(double,double);
 
 
 int CFunciones::prioridad(char oper) {
@@ -77,12 +78,12 @@ double CFunciones::evaluar(string p) {
 		case '/':
 			op2 = pila.top(); pila.pop();
 			op1 = pila.top(); pila.pop();
-			rsl = suma(op1, op2);
-			pila.push(rsl);
+			pila.push(op1/op2);
 			break;
 		case '+':
 			op2 = pila.top(); pila.pop();
 			op1 = pila.top(); pila.pop();
+			//rsl = suma(op1, op2);
 			pila.push(op1+op2);
 			break;
 		case '-':
@@ -108,8 +109,9 @@ double CFunciones::suma(double a,double b) {
 	n = _sumaE(a,b);
 		return n;
 }
-int CFunciones::resta() {
-	return 0;
+double CFunciones::resta(double a,double b) {
+	n = _restaE(a,b);
+	return n;
 }
 int CFunciones::mult() {
 	return 0;
@@ -124,7 +126,7 @@ double CFunciones::elevarCuadrado(double numero) {
 	return expo;
 }
 
-double CFunciones::valorAbsoluto(double numero) {
+int CFunciones::valorAbsoluto(int numero) {
 	int a = valorAbs(numero);
 	return a;
 }

@@ -21,13 +21,13 @@ public:
 
 	//4 basicas
 	double suma(double,double);
-	int resta();
+	double resta(double,double);
 	int mult();
 	int divi();
 
 	//Extra
 
-	double valorAbsoluto(double numero);
+	int valorAbsoluto(int numero);
 	double raizCuadrada(double numero);
 	int factorial(int numero);
 	double elevarCuadrado(double numero);

@@ -529,43 +529,45 @@ private: System::Void btnDiv_Click(System::Object^  sender, System::EventArgs^  
 	h = h + "/";
 	expresion->Text = h;
 }
-private: System::Void btnIgual_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ h = expresion->Text;
-	std::string hileraConvertida = msclr::interop::marshal_as<std::string>(h);
-	string hilera = objFuncion->convertir(hileraConvertida);
-	double res = objFuncion->evaluar(hilera);
-	expresion->Text =  System::Convert::ToString(res);		
-}
-private: System::Void btnFac_Click(System::Object^  sender, System::EventArgs^  e) {
-	System::String^ h = expresion->Text;
-	int exp = System::Convert::ToInt32(expresion->Text);
-	int res = objFuncion->factorial(exp);
-	expresion->Text = System::Convert::ToString(res);
-}
-private: System::Void button16_Click(System::Object^  sender, System::EventArgs^  e) {
-int s =	objFuncion->suma(5,6);
-expresion->Text = System::Convert::ToString(s);
-}
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-
-}
-private: System::Void button20_Click(System::Object^  sender, System::EventArgs^  e) {
-
-	System::String^ h = expresion->Text;
-
-	int exp = System::Convert::ToInt32(expresion->Text);
-	int res = objFuncion->valorAbsoluto(exp);
-	expresion->Text = System::Convert::ToString(res);
-}
 private: System::Void btnPunto_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ h = expresion->Text;
 	h = h + ".";
 	expresion->Text = h;
 }
+private: System::Void btnIgual_Click(System::Object^  sender, System::EventArgs^  e) {
+	std::string hileraConvertida = msclr::interop::marshal_as<std::string>(expresion->Text);
+	double res = objFuncion->evaluar(objFuncion->convertir(hileraConvertida));
+	expresion->Text =  System::Convert::ToString(res);		
+}
+private: System::Void btnFac_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::String^ h = expresion->Text;
+	if (h->Length > 0) {
+		int exp = System::Convert::ToInt32(expresion->Text);
+		int res = objFuncion->factorial(exp);
+		expresion->Text = System::Convert::ToString(res);
+	}
+}
+
+private: System::Void button20_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::String^ h = expresion->Text;
+	if (h->Length > 0) {
+		int res = objFuncion->valorAbsoluto(System::Convert::ToInt32(h));
+		expresion->Text = System::Convert::ToString(res);
+	}
+}
+
+
 private: System::Void button2_Click_1(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ h = expresion->Text;
-	h = h->Substring(0, h->Length - 1);
-	expresion->Text = h;
+	if (h->Length > 0) {
+		h = h->Substring(0, h->Length - 1);
+		expresion->Text = h;
+	}
 }
+private: System::Void button16_Click(System::Object^  sender, System::EventArgs^  e) {
+			 int res = objFuncion->valorAbsoluto(System::Convert::ToInt32(expresion->Text));
+			 expresion->Text = System::Convert::ToString(res);
+		 }
+
 };
 }

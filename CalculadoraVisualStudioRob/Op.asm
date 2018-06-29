@@ -4,8 +4,10 @@
 
 PUBLIC _sumaE
 PUBLIC valorAbs
+PUBLIC _restaE
 
 EXTERN puts:PROC
+
 .data
 
 rsl  dd 0
@@ -21,10 +23,24 @@ num:dword
 	fadd
 	fstp	rsl		; store sum in z
 
-	mov	eax, rsl
+	
 
   ret
 _sumaE endp
+
+_restaE proc  uses ebx ecx , \
+numb:dword , \
+num:dword
+
+	fld	numb	        ; need to convert 32-bit to 64-bit
+	fld	num
+	fsub
+	fstp	rsl		; store sum in z
+
+	mov	eax, rsl
+
+  ret
+_restaE endp
 
 valorAbs proc  uses ebx ecx , \
 nega:dword 
